@@ -13,8 +13,8 @@ import Product from "@/components/product";
 export default function Home() {
   return (
     <Fragment>
-        <Headershared />
         <Sidebarshared />
+        <Headershared />
         <article>
           <Salesoverviewchart />
           <Yearlybreakup />
