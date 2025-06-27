@@ -5,9 +5,9 @@ import HeaderShared from '@/components/shared/header-shared';
 
 type LayoutProps = {
     children: React.ReactNode;
-  };
-  
-  export default function Layout({ children }: LayoutProps) {
+};
+
+export default function Layout({ children }: LayoutProps) {
     return (
       <div className="flex min-h-screen">
         <SidebarShared />
@@ -17,5 +17,5 @@ type LayoutProps = {
         </div>
       </div>
     );
-  }
+}
   

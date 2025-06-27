@@ -1,30 +1,31 @@
-import Image from "next/image";
-import { Fragment } from "react";
-
-import Headershared from "@/components/shared/header-shared";
-import Sidebarshared from "@/components/shared/sidebar-shared";
 import Salesoverviewchart from "@/components/sales-overview-chart";
 import Yearlybreakup from "@/components/yearly-breakup";
 import Monthlyearnings from "@/components/monthly-earnings";
 import Recenttransactions from "@/components/recent-transactions";
 import Productperformance from "@/components/product-performance";
 import Product from "@/components/product";
+import SidebarShared from '@/components/shared/sidebar-shared';
+import HeaderShared from '@/components/shared/header-shared';
 
 export default function Home() {
   return (
-    <Fragment>
-        <Sidebarshared />
-        <Headershared />
-        <article>
-          <Salesoverviewchart />
-          <Yearlybreakup />
-          <Monthlyearnings />
-        </article>
-        <article>
-          <Recenttransactions />
-          <Productperformance />
-        </article>
-        <Product /> 
-    </Fragment>
+    <>
+      <div className="flex min-h-screen">
+        <SidebarShared />
+        <div className="flex-1 flex flex-col">
+          <HeaderShared />
+      <article>
+        <Salesoverviewchart />
+        <Yearlybreakup />
+        <Monthlyearnings />
+      </article>
+      <article>
+        <Recenttransactions />
+        <Productperformance />
+      </article>
+      <Product />
+        </div>
+      </div>
+    </>
   );
 }
