@@ -2,20 +2,27 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
 import { PiBellRinging } from "react-icons/pi";
+import { HiOutlineMenuAlt4 } from "react-icons/hi";
 
-const Header: React.FC = () => {
+const Header: React.FC<{ onOpenSidebar?: () => void }> = ({ onOpenSidebar }) => {
   return (
     <header className="flex items-center justify-between w-full p-4 bg-white">
       {/* Notification Bell */}
     
+    <div className='flex justify-between items-center gap-4'>
+        <HiOutlineMenuAlt4
+          className='mb-2 text-gray-500 cursor-pointer text-xl md:hidden'
+
+        />
       <div className="relative mr-6">
         <button className="focus:outline-none">
           {/* Bell Icon (Heroicons) */}            
           <PiBellRinging className="w-6 h-6 text-gray-500 cursor-pointer" />
-          {/* Blue Dot */}
+          {/* Blue Dot */}  
           <span className="absolute top-0 right-0 block w-2 h-2 bg-[#5d87ff] rounded-full ring-2 ring-white"></span>
         </button>
       </div>
+    </div>
 <div className='flex items-center justify-between'>
 
         {/* Login Button */}

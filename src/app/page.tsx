@@ -1,3 +1,5 @@
+"use client"
+import React, { useState } from 'react';
 import Salesoverviewchart from "@/components/sales-overview-chart";
 import Yearlybreakup from "@/components/yearly-breakup";
 import Monthlyearnings from "@/components/monthly-earnings";
@@ -8,12 +10,13 @@ import SidebarShared from '@/components/shared/sidebar-shared';
 import HeaderShared from '@/components/shared/header-shared';
 
 export default function Home() {
+  const [isMobileSidebarOpen, setMobileSidebarOpen] = useState(false);
   return (
     <>
       <div className="flex min-h-screen">
-        <SidebarShared />
+        <SidebarShared isMobileOpen={isMobileSidebarOpen} onClose={() => setMobileSidebarOpen(false)} />
         <div className="flex-1 flex flex-col">
-          <HeaderShared />
+          <HeaderShared onOpenSidebar={() => setMobileSidebarOpen(true)} />
       <article>
         <Salesoverviewchart />
         <Yearlybreakup />

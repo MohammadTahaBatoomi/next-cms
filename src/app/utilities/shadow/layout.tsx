@@ -2,6 +2,7 @@
 
 import SidebarShared from '@/components/shared/sidebar-shared';
 import HeaderShared from '@/components/shared/header-shared';
+import React, { useState } from 'react';
 
 type LayoutProps = {
     children: React.ReactNode;
