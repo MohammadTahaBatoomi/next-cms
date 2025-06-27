@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import Text from '@/components/ui/default-text'
+
 
 function page() {
   return (
-    <div>page</div>
+    <Fragment>
+      <Text />
+    </Fragment>
   )
 }
 

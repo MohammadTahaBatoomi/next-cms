@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import Icons from '@/components/ui/default-icons'
+
 
 function page() {
   return (
-    <div>page</div>
+    <Fragment>
+      <Icons />
+    </Fragment>
   )
 }
 

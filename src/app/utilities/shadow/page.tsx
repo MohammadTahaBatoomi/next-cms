@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import Shadow from '@/components/ui/default-shadow'
+
 
 function page() {
   return (
-    <div>page</div>
+    <Fragment>
+      <Shadow />
+    </Fragment>
   )
 }
 

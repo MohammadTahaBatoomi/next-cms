@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import Login from '@/components/authentication/login'
+
 
 function page() {
   return (
-    <div>page</div>
+    <Fragment>
+      <Login />
+    </Fragment>
   )
 }
 
