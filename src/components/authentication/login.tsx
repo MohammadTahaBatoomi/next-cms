@@ -47,7 +47,7 @@ export default function Login() {
         </form>
         <div className="mt-6 text-sm text-gray-600">
           New to Modernize?{' '}
-          <Link href="#" className="text-[#5d87ff]">Create an account</Link>
+          <Link href="/authentication/register" className="text-[#5d87ff]">Create an account</Link>
         </div>
       </div>
     </div>
