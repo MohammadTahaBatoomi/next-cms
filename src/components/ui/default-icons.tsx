@@ -4,7 +4,7 @@ import { AiOutlineAntDesign } from "react-icons/ai";
 
 const CustomReactIconsGuide = () => {
   return (
-    <div className="max-w-4xl mt-10 mx-5 md:mx-auto p-6 space-y-6 bg-white rounded-lg shadow-md text-sm">
+    <div className="max-w-6xl mt-10 mx-5 md:mx-auto p-6 space-y-6 bg-white rounded-lg shadow-md text-sm">
       {/* Explore */}
       <h1 className="text-xl">Icons</h1>
       <div className="space-y-1">
@@ -33,7 +33,7 @@ const CustomReactIconsGuide = () => {
           <span className="font-medium text-md">⚙️ Installation</span>
         </div>
         <p className="text-gray-600">Install React Icons using:</p>
-        <div className="bg-gray-100 px-4 py-2 rounded font-mono border border-gray-200">
+        <div className="bg-[#f8f9fe] px-4 py-2 rounded font-mono">
           {/* <span className="text-green-600">npm</span>{' '} */}
           <span className="text-gray-800">npm install react-icons</span>
         </div>
@@ -48,7 +48,7 @@ const CustomReactIconsGuide = () => {
         </div>
         <p className="text-gray-600">Import and use any icon in your components:</p>
         
-        <div className="bg-[#f8f8ff] px-4 py-3 rounded-md font-mono text-sm text-black border border-gray-300 leading-relaxed overflow-x-auto">
+        <div className="bg-[#f8f9fe] px-4 py-3 rounded-md font-mono text-sm text-black leading-relaxed overflow-x-auto">
           <pre>
             <code>
               <span className="text-[#954121]">import</span>{""}
