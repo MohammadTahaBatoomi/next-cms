@@ -48,7 +48,7 @@ export default function Login() {
         </form>
         <div className="mt-6 text-sm text-gray-600">
         Already have an Account?{' '}
-          <Link href="/authentication/register" className="text-[#5d87ff]">Sign In</Link>
+          <Link href="/authentication/login" className="text-[#5d87ff]">Sign In</Link>
         </div>
       </div>
     </div>
