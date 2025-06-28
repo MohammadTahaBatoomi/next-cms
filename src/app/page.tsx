@@ -17,7 +17,7 @@ export default function Home() {
         <SidebarShared isMobileOpen={isMobileSidebarOpen} onClose={() => setMobileSidebarOpen(false)} />
         <div className="flex-1 flex flex-col">
           <HeaderShared onOpenSidebar={() => setMobileSidebarOpen(true)} />
-            <div className='max-w-6 mx-auto'>
+            <div className='max-w-6xl mx-auto'>
 
       <article className='flex justify-between items-center'>
         <Salesoverviewchart />
