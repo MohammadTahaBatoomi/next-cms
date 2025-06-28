@@ -3,6 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import { MdOutlineContentCopy } from "react-icons/md";
 import { TbLogin, TbTypography, TbMoodHappy } from "react-icons/tb";
@@ -19,19 +20,63 @@ const SidebarShared: React.FC<Props> = ({ isMobileOpen = false, onClose }) => {
   const pathname = usePathname();
 
   return (
-    <aside
-      className={`
-        hidden md:flex
-        ${isMobileOpen ? 'fixed inset-0 z-50 flex bg-white' : ''}
-        w-68 min-h-screen border-r border-[#e8eae9] flex-col px-6 py-6
-        transition-transform duration-300
-      `}
-    >
-      {/* دکمه بستن در حالت موبایل */}
-      {isMobileOpen && (
-        <button className="md:hidden mb-4 self-end text-xl" onClick={onClose}>✕</button>
-      )}
+    <>
+      {/* Desktop Sidebar */}
+      <aside className="hidden md:flex w-68 min-h-screen border-r border-[#e8eae9] flex-col px-6 py-6">
+        {/* Desktop Content */}
+        <SidebarContent pathname={pathname} />
+      </aside>
 
+      {/* Mobile Sidebar Overlay */}
+      <AnimatePresence>
+        {isMobileOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 bg-black/60 bg-opacity-90 z-40 md:hidden"
+            onClick={onClose}
+          />
+        )}
+      </AnimatePresence>
+
+      {/* Mobile Sidebar */}
+      <AnimatePresence>
+        {isMobileOpen && (
+          <motion.aside
+            initial={{ x: '-100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '-100%' }}
+            transition={{ 
+              type: "spring", 
+              damping: 25, 
+              stiffness: 200,
+              duration: 0.4 
+            }}
+            className="fixed inset-y-0 left-0 z-50 w-68 bg-white border-r border-[#e8eae9] flex flex-col px-6 py-6 md:hidden"
+          >
+            {/* Mobile Close Button
+            <button 
+              className="mb-4 self-end text-xl text-gray-500 hover:text-gray-700 transition-colors" 
+              onClick={onClose}
+            >
+              ✕
+            </button> */}
+            
+            {/* Mobile Content */}
+            <SidebarContent pathname={pathname} />
+          </motion.aside>
+        )}
+      </AnimatePresence>
+    </>
+  );
+};
+
+// Separate component for sidebar content to avoid duplication
+const SidebarContent: React.FC<{ pathname: string }> = ({ pathname }) => {
+  return (
+    <>
       {/* لوگو */}
       <div className="mb-8">
         <Link href="/">
@@ -138,7 +183,7 @@ const SidebarShared: React.FC<Props> = ({ isMobileOpen = false, onClose }) => {
           </div>
         </div>
       </div>
-    </aside>
+    </>
   );
 };
 

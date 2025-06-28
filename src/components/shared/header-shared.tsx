@@ -5,6 +5,10 @@ import { PiBellRinging } from "react-icons/pi";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 
 const Header: React.FC<{ onOpenSidebar?: () => void }> = ({ onOpenSidebar }) => {
+  const handleMenuClick = () => {
+    onOpenSidebar?.();
+  };
+
   return (
     <header className="flex items-center justify-between w-full p-4 bg-white">
       {/* Notification Bell */}
@@ -12,7 +16,7 @@ const Header: React.FC<{ onOpenSidebar?: () => void }> = ({ onOpenSidebar }) => 
     <div className='flex justify-between items-center gap-4'>
         <HiOutlineMenuAlt4
           className='mb-2 text-gray-500 cursor-pointer text-xl md:hidden'
-
+          onClick={handleMenuClick}
         />
       <div className="relative mr-6">
         <button className="focus:outline-none">
