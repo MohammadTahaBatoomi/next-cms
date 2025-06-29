@@ -19,12 +19,7 @@ export default function Home() {
           <HeaderShared onOpenSidebar={() => setMobileSidebarOpen(true)} />
 
             <div className='max-w-6xl mx-auto'>
-            <article className='flex flex-col md:flex-row justify-between items-start gap-6'>
-  <Recenttransactions />
-  <Productperformance />
-</article>
-    
-      <Product />
+               <Product />
             </div>
 
         </div>

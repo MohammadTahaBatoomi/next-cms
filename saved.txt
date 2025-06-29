@@ -13,3 +13,9 @@
       <Monthlyearnings />
     </div>
   </div></article>
+
+
+              <article className='flex flex-col md:flex-row justify-between items-start gap-6'>
+  <Recenttransactions />
+  <Productperformance />
+</article>
