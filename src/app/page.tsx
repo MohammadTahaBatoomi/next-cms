@@ -5,7 +5,7 @@ import Yearlybreakup from "@/components/landing/yearly-breakup";
 import Monthlyearnings from "@/components/landing/monthly-earnings";
 import Recenttransactions from "@/components/landing/recent-transactions";
 import Productperformance from "@/components/landing/product-performance";
-import Product from "@/components/landing/product";
+import Blog from "@/components/landing/blog";
 import SidebarShared from '@/components/shared/sidebar-shared';
 import HeaderShared from '@/components/shared/header-shared';
 
@@ -19,7 +19,7 @@ export default function Home() {
           <HeaderShared onOpenSidebar={() => setMobileSidebarOpen(true)} />
 
             <div className='max-w-6xl mx-auto'>
-               <Product />
+               <Blog />
             </div>
 
         </div>
