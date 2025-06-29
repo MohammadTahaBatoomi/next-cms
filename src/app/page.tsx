@@ -18,14 +18,6 @@ export default function Home() {
         <div className="flex-1 flex flex-col">
           <HeaderShared onOpenSidebar={() => setMobileSidebarOpen(true)} />
             <div className='max-w-6xl mx-auto'>
-
-      <article className='flex flex-row justify-center items-start  max-w-6xl mx-auto'>
-        <Salesoverviewchart />
-        <div className='flex flex-col gap-2'>
-          <Yearlybreakup />
-          <Monthlyearnings />
-        </div>
-      </article>
       <article className='flex justify-between items-center w-[100%]' >
         <Recenttransactions />
         <Productperformance />
