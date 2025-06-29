@@ -17,13 +17,16 @@ export default function Home() {
         <SidebarShared isMobileOpen={isMobileSidebarOpen} onClose={() => setMobileSidebarOpen(false)} />
         <div className="flex-1 flex flex-col">
           <HeaderShared onOpenSidebar={() => setMobileSidebarOpen(true)} />
+
             <div className='max-w-6xl mx-auto'>
-      <article className='flex justify-between items-center w-[100%]' >
-        <Recenttransactions />
-        <Productperformance />
-      </article>
+            <article className='flex flex-col md:flex-row justify-between items-start gap-6'>
+  <Recenttransactions />
+  <Productperformance />
+</article>
+    
       <Product />
             </div>
+
         </div>
       </div>
     </>
