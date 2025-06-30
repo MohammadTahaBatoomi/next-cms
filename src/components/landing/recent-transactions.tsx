@@ -7,48 +7,62 @@ import {
   TimelineConnector,
   TimelineContent,
   timelineOppositeContentClasses,
-} from '@mui/lab';
-import { Link, Typography } from '@mui/material';
+} from "@mui/lab";
+import { Link, Typography } from "@mui/material";
 
 const transactions = [
   {
-    time: '09:30 am',
-    color: 'primary',
-    content: <>Payment received <br /> John Doe $385.90</>,
-  },
-  {
-    time: '10:00 am',
-    color: 'secondary',
+    time: "09:30 am",
+    color: "primary",
     content: (
       <>
-        <Typography fontWeight="600">New sale recorded</Typography>{' '}
-        <Link href="/" underline="none">#ML-3467</Link>
+        Payment received <br /> John Doe $385.90
       </>
     ),
   },
   {
-    time: '12:00 am',
-    color: 'success',
-    content: <>Payment was made<br />$64.95 to Michael</>,
-  },
-  {
-    time: '09:30 am',
-    color: 'warning',
+    time: "10:00 am",
+    color: "secondary",
     content: (
       <>
-        <Typography fontWeight="600">New sale recorded</Typography>{' '}
-        <Link href="/" underline="none">#ML-3467</Link>
+        <Typography fontWeight="600">New sale recorded</Typography>{" "}
+        <Link href="/" underline="none">
+          #ML-3467
+        </Link>
       </>
     ),
   },
   {
-    time: '09:30 am',
-    color: 'error',
+    time: "12:00 am",
+    color: "success",
+    content: (
+      <>
+        Payment was made
+        <br />
+        $64.95 to Michael
+      </>
+    ),
+  },
+  {
+    time: "09:30 am",
+    color: "warning",
+    content: (
+      <>
+        <Typography fontWeight="600">New sale recorded</Typography>{" "}
+        <Link href="/" underline="none">
+          #ML-3467
+        </Link>
+      </>
+    ),
+  },
+  {
+    time: "09:30 am",
+    color: "error",
     content: <Typography fontWeight="600">New arrival recorded</Typography>,
   },
   {
-    time: '12:00 am',
-    color: 'success',
+    time: "12:00 am",
+    color: "success",
     content: <>Payment Received</>,
     hasConnector: false,
   },
@@ -63,10 +77,10 @@ const RecentTransactions = () => {
         className="theme-timeline"
         sx={{
           p: 0,
-          mb: '-40px',
-          '& .MuiTimelineConnector-root': {
-            width: '1px',
-            backgroundColor: '#efefef',
+          mb: "-40px",
+          "& .MuiTimelineConnector-root": {
+            width: "1px",
+            backgroundColor: "#efefef",
           },
           [`& .${timelineOppositeContentClasses.root}`]: {
             flex: 0.5,

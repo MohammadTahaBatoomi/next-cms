@@ -38,7 +38,7 @@ const ecoCard = [
   },
 ];
 
-const ProductCard = ({ product }: { product: typeof ecoCard[0] }) => {
+const ProductCard = ({ product }: { product: (typeof ecoCard)[0] }) => {
   return (
     <div className="relative rounded-xl overflow-hidden shadow hover:shadow-lg transition-all duration-300">
       <Link href="/" className="block">
@@ -59,8 +59,12 @@ const ProductCard = ({ product }: { product: typeof ecoCard[0] }) => {
         <h3 className="text-base font-medium text-gray-800">{product.title}</h3>
         <div className="flex items-center justify-between mt-2">
           <div className="flex items-center space-x-2">
-            <span className="text-sm font-semibold text-gray-800">${product.price}</span>
-            <span className="text-sm line-through text-gray-500">${product.salesPrice}</span>
+            <span className="text-sm font-semibold text-gray-800">
+              ${product.price}
+            </span>
+            <span className="text-sm line-through text-gray-500">
+              ${product.salesPrice}
+            </span>
           </div>
           <Rating value={product.rating} size="small" readOnly />
         </div>

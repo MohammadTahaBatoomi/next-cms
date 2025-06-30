@@ -44,7 +44,11 @@ export default function DefaultShadow() {
                   <div
                     key={e.label + "-dark"}
                     className={`flex items-center justify-center rounded-sm font-medium transition-all p-4
-                      ${e.label === "elevation=0" ? "bg-transparent" : "bg-neutral-800"} text-neutral-200
+                      ${
+                        e.label === "elevation=0"
+                          ? "bg-transparent"
+                          : "bg-neutral-800"
+                      } text-neutral-200
                       ${e.shadow}
                     `}
                   >

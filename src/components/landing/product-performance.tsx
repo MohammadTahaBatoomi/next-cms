@@ -7,7 +7,7 @@ import {
   TableHead,
   TableRow,
   Chip,
-} from '@mui/material';
+} from "@mui/material";
 
 const products = [
   {
@@ -61,12 +61,12 @@ const ProductPerformance = () => {
     <div className="border border-[#eceef0] py-7.5 px-12 rounded-2xl">
       <h1 className="mb-4 text-lg font-medium">Product Performance</h1>
 
-      <Box sx={{ overflow: 'auto', width: { xs: '280px', sm: 'auto' } }}>
-        <Table sx={{ whiteSpace: 'nowrap', mt: 2 }}>
+      <Box sx={{ overflow: "auto", width: { xs: "280px", sm: "auto" } }}>
+        <Table sx={{ whiteSpace: "nowrap", mt: 2 }}>
           <TableHead>
             <TableRow>
               {headers.map((head, i) => (
-                <TableCell key={i} align={head.align || 'left'}>
+                <TableCell key={i} align={head.align || "left"}>
                   <Typography variant="subtitle2" fontWeight={600}>
                     {head.label}
                   </Typography>
@@ -76,38 +76,48 @@ const ProductPerformance = () => {
           </TableHead>
 
           <TableBody>
-            {products.map(({ id, name, post, pname, priority, pbg, budget }) => (
-              <TableRow key={id}>
-                <TableCell>
-                  <Typography fontSize="15px" fontWeight={500}>{id}</Typography>
-                </TableCell>
+            {products.map(
+              ({ id, name, post, pname, priority, pbg, budget }) => (
+                <TableRow key={id}>
+                  <TableCell>
+                    <Typography fontSize="15px" fontWeight={500}>
+                      {id}
+                    </Typography>
+                  </TableCell>
 
-                <TableCell>
-                  <Typography variant="subtitle2" fontWeight={600}>{name}</Typography>
-                  <Typography color="textSecondary" fontSize="13px">{post}</Typography>
-                </TableCell>
+                  <TableCell>
+                    <Typography variant="subtitle2" fontWeight={600}>
+                      {name}
+                    </Typography>
+                    <Typography color="textSecondary" fontSize="13px">
+                      {post}
+                    </Typography>
+                  </TableCell>
 
-                <TableCell>
-                  <Typography color="textSecondary" variant="subtitle2">{pname}</Typography>
-                </TableCell>
+                  <TableCell>
+                    <Typography color="textSecondary" variant="subtitle2">
+                      {pname}
+                    </Typography>
+                  </TableCell>
 
-                <TableCell>
-                  <Chip
-                    size="small"
-                    label={priority}
-                    sx={{
-                      px: 1,
-                      backgroundColor: pbg,
-                      color: '#fbfcfd',
-                    }}
-                  />
-                </TableCell>
+                  <TableCell>
+                    <Chip
+                      size="small"
+                      label={priority}
+                      sx={{
+                        px: 1,
+                        backgroundColor: pbg,
+                        color: "#fbfcfd",
+                      }}
+                    />
+                  </TableCell>
 
-                <TableCell align="right">
-                  <Typography variant="h6">${budget}k</Typography>
-                </TableCell>
-              </TableRow>
-            ))}
+                  <TableCell align="right">
+                    <Typography variant="h6">${budget}k</Typography>
+                  </TableCell>
+                </TableRow>
+              )
+            )}
           </TableBody>
         </Table>
       </Box>

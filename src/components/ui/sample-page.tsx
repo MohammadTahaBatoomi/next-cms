@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 function SamplePage() {
   return (
@@ -8,7 +8,7 @@ function SamplePage() {
         <p className="text-md text-[#2a3547]">This is a sample page</p>
       </div>
     </div>
-  )
+  );
 }
 
-export default SamplePage
+export default SamplePage;

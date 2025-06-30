@@ -1,6 +1,6 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Login() {
   return (
@@ -16,7 +16,12 @@ export default function Login() {
         <p className="text-gray-400 text-sm mb-4">Your Social Campaigns</p>
         <form className="w-full flex flex-col gap-4">
           <div>
-            <label htmlFor="username" className="block text-sm font-semibold text-gray-700 mb-1">Username</label>
+            <label
+              htmlFor="username"
+              className="block text-sm font-semibold text-gray-700 mb-1"
+            >
+              Username
+            </label>
             <input
               id="Name"
               type="text"
@@ -24,7 +29,12 @@ export default function Login() {
             />
           </div>
           <div>
-            <label htmlFor="Email Address" className="block text-sm font-semibold text-gray-700 mb-1">Email Address</label>
+            <label
+              htmlFor="Email Address"
+              className="block text-sm font-semibold text-gray-700 mb-1"
+            >
+              Email Address
+            </label>
             <input
               id="Email Address"
               type="email"
@@ -32,7 +42,12 @@ export default function Login() {
             />
           </div>
           <div>
-            <label htmlFor="password" className="block text-sm font-semibold text-gray-700 mb-1">Password</label>
+            <label
+              htmlFor="password"
+              className="block text-sm font-semibold text-gray-700 mb-1"
+            >
+              Password
+            </label>
             <input
               id="password"
               type="password"
@@ -47,8 +62,10 @@ export default function Login() {
           </button>
         </form>
         <div className="mt-6 text-sm text-gray-600">
-        Already have an Account?{' '}
-          <Link href="/authentication/login" className="text-[#5d87ff]">Sign In</Link>
+          Already have an Account?{" "}
+          <Link href="/authentication/login" className="text-[#5d87ff]">
+            Sign In
+          </Link>
         </div>
       </div>
     </div>

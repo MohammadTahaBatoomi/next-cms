@@ -46,17 +46,22 @@ const CustomReactIconsGuide = () => {
         <div className="flex items-center gap-2 text-lg font-semibold">
           <span className="font-medium text-md">🧩 Usage Example</span>
         </div>
-        <p className="text-gray-600">Import and use any icon in your components:</p>
-        
+        <p className="text-gray-600">
+          Import and use any icon in your components:
+        </p>
+
         <div className="bg-[#f8f9fe] px-4 py-3 rounded-md font-mono text-sm text-black leading-relaxed overflow-x-auto">
           <pre>
             <code>
-              <span className="text-[#954121]">import</span>{""}
-              <span>{"{ FiHome }"}</span>{""}
+              <span className="text-[#954121]">import</span>
+              {""}
+              <span>{"{ FiHome }"}</span>
+              {""}
               <span className="text-[#954121]">from</span>{" "}
               <span className="text-[#289161]">'react-icons/fi'</span>;{"\n"}
               <span className="text-[#954121]">function</span>{" "}
-              <span className="text-[#304b77] font-bold">MyComponent</span>() {"{"}
+              <span className="text-[#304b77] font-bold">MyComponent</span>(){" "}
+              {"{"}
               {"\n  "}
               <span className="text-[#954121]">return</span>{" "}
               <span className="text-[#000c94]">&lt;FiHome /&gt;</span>;{"\n"}

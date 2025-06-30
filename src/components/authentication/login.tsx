@@ -1,6 +1,6 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Login() {
   return (
@@ -16,7 +16,12 @@ export default function Login() {
         <p className="text-gray-400 text-sm mb-4">Your Social Campaigns</p>
         <form className="w-full flex flex-col gap-4">
           <div>
-            <label htmlFor="username" className="block text-sm font-semibold text-gray-700 mb-1">Username</label>
+            <label
+              htmlFor="username"
+              className="block text-sm font-semibold text-gray-700 mb-1"
+            >
+              Username
+            </label>
             <input
               id="username"
               type="text"
@@ -24,7 +29,12 @@ export default function Login() {
             />
           </div>
           <div>
-            <label htmlFor="password" className="block text-sm font-semibold text-gray-700 mb-1">Password</label>
+            <label
+              htmlFor="password"
+              className="block text-sm font-semibold text-gray-700 mb-1"
+            >
+              Password
+            </label>
             <input
               id="password"
               type="password"
@@ -36,7 +46,9 @@ export default function Login() {
               <input type="checkbox" className="accent-[#5d87ff]" />
               <span className="text-gray-600">Remember this Device</span>
             </label>
-            <Link href="/" className="text-[#5d87ff]">Forgot Password?</Link>
+            <Link href="/" className="text-[#5d87ff]">
+              Forgot Password?
+            </Link>
           </div>
           <button
             type="submit"
@@ -46,8 +58,10 @@ export default function Login() {
           </button>
         </form>
         <div className="mt-6 text-sm text-gray-600">
-          New to Modernize?{' '}
-          <Link href="/authentication/register" className="text-[#5d87ff]">Create an account</Link>
+          New to Modernize?{" "}
+          <Link href="/authentication/register" className="text-[#5d87ff]">
+            Create an account
+          </Link>
         </div>
       </div>
     </div>

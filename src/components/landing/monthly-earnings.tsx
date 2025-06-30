@@ -1,9 +1,5 @@
-import React from 'react';
-import {
-  Card,
-  CardContent,
-  Typography,
-} from '@mui/material';
+import React from "react";
+import { Card, CardContent, Typography } from "@mui/material";
 import {
   LineChart,
   Line,
@@ -12,17 +8,17 @@ import {
   ResponsiveContainer,
   Area,
   Tooltip,
-} from 'recharts';
-import { FiDollarSign, FiArrowUpRight } from 'react-icons/fi';
+} from "recharts";
+import { FiDollarSign, FiArrowUpRight } from "react-icons/fi";
 
 const data = [
-  { name: 'Jan', uv: 2000 },
-  { name: 'Feb', uv: 2500 },
-  { name: 'Mar', uv: 2200 },
-  { name: 'Apr', uv: 2780 },
-  { name: 'May', uv: 1890 },
-  { name: 'Jun', uv: 2390 },
-  { name: 'Jul', uv: 3490 },
+  { name: "Jan", uv: 2000 },
+  { name: "Feb", uv: 2500 },
+  { name: "Mar", uv: 2200 },
+  { name: "Apr", uv: 2780 },
+  { name: "May", uv: 1890 },
+  { name: "Jun", uv: 2390 },
+  { name: "Jul", uv: 3490 },
 ];
 
 function MonthlyEarnings() {
