@@ -3,9 +3,9 @@ import Sample from "@/components/ui/sample-page";
 
 function page() {
   return (
-    <Fragment>
+    <div className="mt-24">
       <Sample />
-    </Fragment>
+    </div>
   );
 }
 

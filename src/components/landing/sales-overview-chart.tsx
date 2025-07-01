@@ -54,7 +54,7 @@ function SalesOverviewChart() {
             </IconButton>
           </div>
         </div>
-        <div className="h-88 w-full">
+        <div className="h-92.5 w-full">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={data} barCategoryGap={20}>
               <CartesianGrid strokeDasharray="3 3" vertical={false} />

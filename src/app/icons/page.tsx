@@ -3,9 +3,9 @@ import Icons from "@/components/ui/default-icons";
 
 function page() {
   return (
-    <Fragment>
+    <div className="mt-24">
       <Icons />
-    </Fragment>
+    </div>
   );
 }
 

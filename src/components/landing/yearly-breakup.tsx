@@ -16,7 +16,7 @@ function YearlyBreakup() {
         <div className="flex items-center justify-between gap-26">
           <div className="flex flex-col justify-center gap-6">
             {/* <Typography variant="p" className="font-bold mb-6">Yearly Breakup</Typography> */}
-            <h1 className="font-medium mt-4 text-lg">Yearly Breakup</h1>
+            <h1 className="font-medium mt-4 text-md">Yearly Breakup</h1>
             <div>
               <Typography variant="h5" fontWeight="700">
                 $36,358

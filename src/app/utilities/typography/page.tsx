@@ -3,9 +3,9 @@ import Text from "@/components/ui/default-text";
 
 function page() {
   return (
-    <Fragment>
+    <div className="mt-24">
       <Text />
-    </Fragment>
+    </div>
   );
 }
 

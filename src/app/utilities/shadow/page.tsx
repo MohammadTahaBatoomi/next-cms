@@ -3,9 +3,9 @@ import Shadow from "@/components/ui/default-shadow";
 
 function page() {
   return (
-    <Fragment>
+    <div className="mt-24">
       <Shadow />
-    </Fragment>
+    </div >
   );
 }
 

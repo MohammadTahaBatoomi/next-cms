@@ -80,8 +80,8 @@ const textVariants = [
 
 function DefaultText() {
   return (
-    <div className="space-y-6 max-w-6xl mx-auto">
-      <div className="font-medium mb-2">Default Text</div>
+    <div className="space-y-6 max-w-6xl mx-auto border border-[#e8eae9] rounded-lg shadow-sm p-8">
+      <div className="font-medium mb-2 text-lg">Default Text</div>
       <div className="space-y-4">
         {typography.map((item, idx) => (
           <div key={item.label} className="bg-white rounded-lg shadow-sm p-4">
@@ -98,7 +98,7 @@ function DefaultText() {
           </div>
         ))}
       </div>
-      <div className="mt-10 font-medium mb-2">Default Text</div>
+      <div className="mt-10 font-medium text-lg mb-2">Default Text</div>
       <div className="space-y-4 mb-5">
         {textVariants.map((item, idx) => (
           <div key={idx} className="bg-white rounded-lg shadow-sm p-4">

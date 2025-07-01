@@ -21,7 +21,7 @@ export default function Home() {
       />
 
       {/* Main content */}
-      <div className="flex-1 flex flex-col md:pl-[272px]">
+      <div className="flex-1 flex flex-col">
         {/* Fixed Header */}
         <HeaderShared onOpenSidebar={() => setMobileSidebarOpen(true)} />
 
@@ -32,10 +32,10 @@ export default function Home() {
               <Salesoverviewchart />
             </div>
             <div className="w-full flex flex-col sm:flex-col md:flex-row 2xl:flex-col gap-4 2xl:w-1/3">
-              <div className="w-full md:w-1/2">
+              <div className="w-full">
                 <Yearlybreakup />
               </div>
-              <div className="w-full md:w-1/2">
+              <div className="w-full">
                 <Monthlyearnings />
               </div>
             </div>
