@@ -1,44 +1,38 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { PiBellRinging } from "react-icons/pi";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 
-const Header: React.FC<{ onOpenSidebar?: () => void }> = ({
-  onOpenSidebar,
-}) => {
+const Header: React.FC<{ onOpenSidebar?: () => void }> = ({ onOpenSidebar }) => {
   const handleMenuClick = () => {
     onOpenSidebar?.();
   };
 
   return (
-    <header className="fixed md:flex items-center justify-between w-[100%] md:w-[85%] p-4 bg-white">
-      {/* Notification Bell */}
-
-      <div className="flex justify-between items-center gap-4">
+    <header className="fixed top-0 left-0 md:left-[272px] z-30 w-full md:w-[calc(100%-272px)] p-4 bg-white flex items-center justify-between">
+      <div className="flex items-center gap-4">
         <HiOutlineMenuAlt4
-          className="mb-2 text-gray-500 cursor-pointer text-xl md:hidden"
+          className="text-gray-500 cursor-pointer text-xl md:hidden"
           onClick={handleMenuClick}
         />
-        <div className="relative mr-6">
+        <div className="relative">
           <button className="focus:outline-none">
-            {/* Bell Icon (Heroicons) */}
             <PiBellRinging className="w-6 h-6 text-gray-500 cursor-pointer" />
-            {/* Blue Dot */}
             <span className="absolute top-0 right-0 block w-2 h-2 bg-[#5d87ff] rounded-full ring-2 ring-white"></span>
           </button>
         </div>
       </div>
-      <div className="flex items-center justify-between">
-        {/* Login Button */}
+
+      <div className="flex items-center gap-4">
         <Link
           href="/authentication/login"
-          className="mr-6 px-4 py-1.5 bg-[#5d87ff] text-white rounded-sm shadow transition"
+          className="px-4 py-1.5 bg-[#5d87ff] text-white rounded-sm shadow transition"
         >
           Login
         </Link>
 
-        {/* User Avatar */}
         <Image
           src="/images/landing/user.jpg"
           alt="User Avatar"

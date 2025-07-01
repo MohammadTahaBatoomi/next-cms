@@ -22,7 +22,8 @@ const SidebarShared: React.FC<Props> = ({ isMobileOpen = false, onClose }) => {
   return (
     <>
       {/* Desktop Sidebar */}
-      <aside className="hidden md:flex fixed w-68 min-h-screen border-r border-[#e8eae9] flex-col px-6 py-6">
+      <aside className="hidden md:flex fixed top-0 left-0 w-68 h-full z-20 border-r border-[#e8eae9] flex-col px-6 py-6 bg-white">
+
         {/* Desktop Content */}
         <SidebarContent pathname={pathname} />
       </aside>

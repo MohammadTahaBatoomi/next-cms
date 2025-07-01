@@ -11,46 +11,44 @@ import HeaderShared from "@/components/shared/header-shared";
 
 export default function Home() {
   const [isMobileSidebarOpen, setMobileSidebarOpen] = useState(false);
+
   return (
-    <>
-      <div className="flex min-h-screen">
-        <div>
-          <SidebarShared
-            isMobileOpen={isMobileSidebarOpen}
-            onClose={() => setMobileSidebarOpen(false)}
-          />
-        </div>
-        <div className="flex-1 flex flex-col">
-          <div className="flex justify-end mb-20">
-            <HeaderShared onOpenSidebar={() => setMobileSidebarOpen(true)} />
-          </div>
+    <div className="flex min-h-screen">
+      {/* Sidebar */}
+      <SidebarShared
+        isMobileOpen={isMobileSidebarOpen}
+        onClose={() => setMobileSidebarOpen(false)}
+      />
 
-          <div className="max-w-6xl mx-auto">
-            <article className="flex flex-col 2xl:flex-row justify-center items-start max-w-6xl mx-auto gap-4">
-              {/* چارت سمت چپ */}
-              <div className="w-full">
-                <Salesoverviewchart />
+      {/* Main content */}
+      <div className="flex-1 flex flex-col md:pl-[272px]">
+        {/* Fixed Header */}
+        <HeaderShared onOpenSidebar={() => setMobileSidebarOpen(true)} />
+
+        {/* Page Content */}
+        <main className="pt-24 px-4 max-w-6xl mx-auto w-full">
+          <article className="flex flex-col 2xl:flex-row justify-center items-start gap-4">
+            <div className="w-full">
+              <Salesoverviewchart />
+            </div>
+            <div className="w-full flex flex-col sm:flex-col md:flex-row 2xl:flex-col gap-4 2xl:w-1/3">
+              <div className="w-full md:w-1/2">
+                <Yearlybreakup />
               </div>
-
-              {/* دو کارت سمت راست */}
-              <div className="w-full flex flex-col sm:flex-col md:flex-row 2xl:flex-col gap-4 2xl:w-1/3">
-                <div className="w-full md:w-1/2">
-                  <Yearlybreakup />
-                </div>
-                <div className="w-full md:w-1/2">
-                  <Monthlyearnings />
-                </div>
+              <div className="w-full md:w-1/2">
+                <Monthlyearnings />
               </div>
-            </article>
+            </div>
+          </article>
 
-            <article className="flex flex-col md:flex-row justify-between items-start gap-6 mb-6">
-              <Recenttransactions />
-              <Productperformance />
-            </article>
-            <Blog />
-          </div>
-        </div>
+          <article className="flex flex-col md:flex-row justify-between items-start gap-6 mb-6">
+            <Recenttransactions />
+            <Productperformance />
+          </article>
+
+          <Blog />
+        </main>
       </div>
-    </>
+    </div>
   );
 }
