@@ -14,7 +14,7 @@ export default function Layout({ children }: LayoutProps) {
   const [isMobileSidebarOpen, setMobileSidebarOpen] = useState(false);
 
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen xl:ml-64 2xl:ml-200">
       <SidebarShared
         isMobileOpen={isMobileSidebarOpen}
         onClose={() => setMobileSidebarOpen(false)}

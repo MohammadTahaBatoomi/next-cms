@@ -80,7 +80,7 @@ const textVariants = [
 
 function DefaultText() {
   return (
-    <div className="space-y-6 max-w-6xl mx-auto border border-[#e8eae9] rounded-lg shadow-sm p-8">
+    <div className="space-y-6 max-w-6xl border border-[#e8eae9] rounded-lg shadow-sm p-6 mx-6">
       <div className="font-medium mb-2 text-lg">Default Text</div>
       <div className="space-y-4">
         {typography.map((item, idx) => (

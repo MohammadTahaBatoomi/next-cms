@@ -15,9 +15,9 @@ const elevations = [
 
 export default function DefaultShadow() {
   return (
-    <div className="flex justify-center items-start bg-transparent py-2">
+    <div className="flex justify-center items-start bg-transparent mx-6">
       <div className="bg-white rounded-lg border border-[#e8eae9] shadow-sm p-2 md:p-10 w-full max-w-6xl">
-        <h2 className="text-lg font-semibold mb-6 text-neutral-800">Shadow</h2>
+        <h2 className="text-lg font-semibold my-4 ml-2 text-neutral-800">Shadow</h2>
         <div className="flex flex-col md:flex-row gap-8">
           {/* روشن */}
           <div className="flex-1 flex justify-center">
