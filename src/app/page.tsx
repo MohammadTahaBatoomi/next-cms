@@ -13,20 +13,21 @@ export default function Home() {
   const [isMobileSidebarOpen, setMobileSidebarOpen] = useState(false);
 
   return (
-    <div className="flex min-h-screen">
-      {/* Sidebar */}
+    <div className="min-h-screen">
+      {/* Fixed Sidebar */}
       <SidebarShared
         isMobileOpen={isMobileSidebarOpen}
         onClose={() => setMobileSidebarOpen(false)}
       />
 
-      {/* Main content */}
-      <div className="flex-1 flex flex-col">
+      {/* Header + Main Wrapper */}
+      <div className="lg:ml-64">
         {/* Fixed Header */}
         <HeaderShared onOpenSidebar={() => setMobileSidebarOpen(true)} />
 
         {/* Page Content */}
-        <main className="pt-24 px-4 max-w-6xl mx-auto w-full">
+        <main className="pt-16 px-4 max-w-6xl mx-auto w-full">
+          {/* Section 1 */}
           <article className="flex flex-col 2xl:flex-row justify-center items-start gap-4">
             <div className="w-full">
               <Salesoverviewchart />
@@ -41,11 +42,13 @@ export default function Home() {
             </div>
           </article>
 
+          {/* Section 2 */}
           <article className="flex flex-col md:flex-row justify-between items-start gap-6 mb-6">
             <Recenttransactions />
             <Productperformance />
           </article>
 
+          {/* Section 3 */}
           <Blog />
         </main>
       </div>
