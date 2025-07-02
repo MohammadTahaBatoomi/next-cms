@@ -22,7 +22,7 @@ const SidebarShared: React.FC<Props> = ({ isMobileOpen = false, onClose }) => {
   return (
     <>
       {/* Desktop Sidebar */}
-      <aside className="hidden md:flex fixed top-0 left-0 w-68 h-full z-20 border-r border-[#e8eae9] flex-col px-6 py-6 bg-white">
+      <aside className="hidden xl:flex fixed top-0 left-0 w-68 h-full z-20 border-r border-[#e8eae9] flex-col px-6 py-6 bg-white">
 
         {/* Desktop Content */}
         <SidebarContent pathname={pathname} />
@@ -36,7 +36,7 @@ const SidebarShared: React.FC<Props> = ({ isMobileOpen = false, onClose }) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-black/60 bg-opacity-90 z-40 md:hidden"
+            className="fixed inset-0 bg-black/60 bg-opacity-90 z-40 xl:hidden"
             onClick={onClose}
           />
         )}
@@ -55,7 +55,7 @@ const SidebarShared: React.FC<Props> = ({ isMobileOpen = false, onClose }) => {
               stiffness: 200,
               duration: 0.4,
             }}
-            className="fixed inset-y-0 left-0 z-50 w-68 bg-white border-r border-[#e8eae9] flex flex-col px-6 py-6 md:hidden"
+            className="fixed inset-y-0 left-0 z-50 w-68 bg-white border-r border-[#e8eae9] flex flex-col px-6 py-6 xl:hidden"
           >
             {/* Mobile Close Button
             <button 

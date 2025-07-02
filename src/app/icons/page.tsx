@@ -3,7 +3,7 @@ import Icons from "@/components/ui/default-icons";
 
 function page() {
   return (
-    <div className="mt-24">
+    <div className="mt-10">
       <Icons />
     </div>
   );

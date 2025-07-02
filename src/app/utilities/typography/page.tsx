@@ -3,7 +3,7 @@ import Text from "@/components/ui/default-text";
 
 function page() {
   return (
-    <div className="mt-24">
+    <div className="mt-10">
       <Text />
     </div>
   );

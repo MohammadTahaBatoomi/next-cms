@@ -4,7 +4,7 @@ import { AiOutlineAntDesign } from "react-icons/ai";
 
 const CustomReactIconsGuide = () => {
   return (
-    <div className="max-w-6xl mt-10 mx-6 md:mx-auto p-6 space-y-6 bg-white rounded-lg border border-[#e8eae9] shadow-sm text-sm">
+    <div className="max-w-[1070px] mt-10 md:mx-auto p-6 space-y-6 bg-white rounded-lg border border-[#e8eae9] shadow-sm text-sm">
       {/* Explore */}
       <h1 className="text-xl">Icons</h1>
       <div className="space-y-1">

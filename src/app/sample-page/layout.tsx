@@ -1,7 +1,5 @@
 "use client";
 
-// components/Layout.tsx or app/layout.tsx if using App Router
-
 import SidebarShared from "@/components/shared/sidebar-shared";
 import HeaderShared from "@/components/shared/header-shared";
 import React, { useState } from "react";
@@ -22,14 +20,22 @@ export default function Layout({ children }: LayoutProps) {
   };
 
   return (
-    <div className="flex min-h-screen">
+    <div className="min-h-screen">
+      {/* Fixed Sidebar */}
       <SidebarShared
         isMobileOpen={isMobileSidebarOpen}
         onClose={handleCloseSidebar}
       />
-      <div className="flex-1 flex flex-col">
+
+      {/* Layout wrapper for header and main */}
+      <div className="xl:ml-64">
+        {/* Fixed Header */}
         <HeaderShared onOpenSidebar={handleOpenSidebar} />
-        <main className="flex-1">{children}</main>
+
+        {/* Content with padding top to prevent overlap */}
+        <main className="pt-16 px-4 max-w-6xl mx-auto w-full">
+          {children}
+        </main>
       </div>
     </div>
   );

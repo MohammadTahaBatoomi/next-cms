@@ -11,10 +11,10 @@ const Header: React.FC<{ onOpenSidebar?: () => void }> = ({ onOpenSidebar }) => 
   };
 
   return (
-    <header className="fixed top-0 left-0 md:left-[272px] z-30 w-full md:w-[calc(100%-272px)] p-4 bg-white flex items-center justify-between">
+    <header className="fixed top-0 left-0 xl:left-[272px] z-30 w-full xl:w-[calc(100%-272px)] p-4 bg-white flex items-center justify-between">
       <div className="flex items-center gap-4">
         <HiOutlineMenuAlt4
-          className="text-gray-500 cursor-pointer text-xl md:hidden"
+          className="text-gray-500 cursor-pointer text-xl xl:hidden"
           onClick={handleMenuClick}
         />
         <div className="relative">
