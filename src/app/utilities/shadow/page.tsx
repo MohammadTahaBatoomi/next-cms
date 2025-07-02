@@ -3,7 +3,7 @@ import Shadow from "@/components/ui/default-shadow";
 
 function page() {
   return (
-    <div className="mt-10">
+    <div className="my-10">
       <Shadow />
     </div >
   );
