@@ -11,7 +11,7 @@ const COLORS = ["#5B7FFF", "#E0E7FF"];
 
 function YearlyBreakup() {
   return (
-    <Card className="rounded-2xl shadow-md mb-4 w-full max-w-3xl h-auto">
+    <Card className="rounded-2xl shadow-md w-full max-w-3xl h-auto">
       <CardContent>
         <div className="flex items-center justify-between gap-26">
           <div className="flex flex-col justify-center gap-6">

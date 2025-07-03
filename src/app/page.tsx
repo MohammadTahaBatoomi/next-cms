@@ -26,13 +26,13 @@ export default function Home() {
         <HeaderShared onOpenSidebar={() => setMobileSidebarOpen(true)} />
 
         {/* Page Content */}
-        <main className="pt-16 px-4 max-w-6xl mx-auto w-full">
+        <main className="pt-16 max-w-6xl mx-auto w-full">
           {/* Section 1 */}
-          <article className="flex flex-col 2xl:flex-row justify-center items-start gap-4">
-            <div className="w-full">
+          <article className="flex flex-col 2xl:flex-row justify-center items-start my-6 px-6">
+            <div className="w-full mr-6">
               <Salesoverviewchart />
             </div>
-            <div className="w-full flex flex-col sm:flex-col md:flex-row 2xl:flex-col gap-4 2xl:w-1/3">
+            <div className="w-full flex flex-col sm:flex-col md:flex-row 2xl:flex-col gap-6 2xl:w-1/3">
               <div className="w-full">
                 <Yearlybreakup />
               </div>
@@ -43,13 +43,22 @@ export default function Home() {
           </article>
 
           {/* Section 2 */}
-          <article className="flex flex-col md:flex-row justify-between items-start gap-6 mb-6">
-            <Recenttransactions />
-            <Productperformance />
-          </article>
+{/* Section 2 */}
+<article className="flex flex-col md:flex-row justify-between items-stretch gap-6 mb-6 px-1.5">
+  <div className="w-full md:w-1/3">
+    <Recenttransactions />
+  </div>
+  <div className="w-full md:w-2/3">
+    <Productperformance />
+  </div>
+</article>
+
 
           {/* Section 3 */}
+          <article className="mx-1">
+
           <Blog />
+          </article>
         </main>
       </div>
     </div>

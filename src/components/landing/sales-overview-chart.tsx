@@ -32,7 +32,7 @@ const data = [
 function SalesOverviewChart() {
   const [month, setMonth] = React.useState("March 2025");
   return (
-    <Card className="mr-6 w-3xl mx-auto">
+    <Card className="w-3xl mx-auto">
       <CardContent>
         <div className="flex justify-between items-center mb-8">
           <Typography variant="p" className="font-medium">
@@ -54,7 +54,7 @@ function SalesOverviewChart() {
             </IconButton>
           </div>
         </div>
-        <div className="h-92.5 w-full">
+        <div className="h-90.5 w-full">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={data} barCategoryGap={20}>
               <CartesianGrid strokeDasharray="3 3" vertical={false} />
