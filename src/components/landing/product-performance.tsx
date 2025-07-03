@@ -58,7 +58,7 @@ const headers = [
 
 const ProductPerformance = () => {
   return (
-    <div className="border border-[#eceef0] py-7.5 px-12 rounded-2xl">
+    <div className="border border-[#eceef0] mx-4.5 xl:mx-0 py-7.5 px-12 rounded-lg">
       <h1 className="mb-4 text-lg font-medium">Product Performance</h1>
 
       <Box sx={{ overflow: "auto", width: { xs: "280px", sm: "auto" } }}>
@@ -95,7 +95,7 @@ const ProductPerformance = () => {
                   </TableCell>
 
                   <TableCell>
-                    <Typography color="textSecondary" variant="subtitle2">
+                    <Typography color="textSecondary" variant="subtitle2" className="">
                       {pname}
                     </Typography>
                   </TableCell>

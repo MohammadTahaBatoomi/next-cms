@@ -40,14 +40,14 @@ const ecoCard = [
 
 const ProductCard = ({ product }: { product: (typeof ecoCard)[0] }) => {
   return (
-    <div className="relative rounded-xl overflow-hidden shadow hover:shadow-lg transition-all duration-300">
+    <div className="relative rounded-lg overflow-hidden shadow hover:shadow-lg mx-5 xl:mx-0 transition-all duration-300">
       <Link href="/" className="block">
         <Image
           src={product.photo}
           alt={product.title}
-          width={500}
-          height={250}
-          className="w-[300px] h-[250px] object-cover"
+          width={800}
+          height={200}
+          className="object-cover xl:h-[250px] xl:w-[500px]"
         />
       </Link>
 

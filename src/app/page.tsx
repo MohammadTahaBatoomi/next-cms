@@ -43,21 +43,19 @@ export default function Home() {
           </article>
 
           {/* Section 2 */}
-{/* Section 2 */}
-<article className="flex flex-col md:flex-row justify-between items-stretch gap-6 mb-6 px-1.5">
-  <div className="w-full md:w-1/3">
-    <Recenttransactions />
-  </div>
-  <div className="w-full md:w-2/3">
-    <Productperformance />
-  </div>
-</article>
-
+          {/* Section 2 */}
+          <article className="flex flex-col md:flex-row justify-between items-stretch gap-6 mb-6 mx-1.5">
+            <div className="w-full md:w-1/3 ">
+              <Recenttransactions />
+            </div>
+            <div className="w-full md:w-2/3">
+              <Productperformance />
+            </div>
+          </article>
 
           {/* Section 3 */}
-          <article className="mx-1">
-
-          <Blog />
+          <article className="mx-1 mb-6">
+            <Blog />
           </article>
         </main>
       </div>

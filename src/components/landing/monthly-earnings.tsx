@@ -23,7 +23,7 @@ const data = [
 
 function MonthlyEarnings() {
   return (
-    <Card className="rounded-2xl shadow-md w-full max-w-3xl h-auto">
+    <Card className="rounded-lg shadow-md w-full max-w-3xl h-auto">
       <CardContent>
         <div className="flex justify-between items-center mb-2">
           <h1 className="font-medium mt-1 text-lg">Monthly Earnings</h1>
@@ -60,7 +60,7 @@ function MonthlyEarnings() {
                 strokeWidth={2}
                 dot={{ r: 0, stroke: "#38BDF8", strokeWidth: 2, fill: "#fff" }}
                 activeDot={{ r: 7 }}
-              />
+              />  
             </LineChart>
           </ResponsiveContainer>
         </div>

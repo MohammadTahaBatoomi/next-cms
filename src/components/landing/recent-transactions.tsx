@@ -70,7 +70,7 @@ const transactions = [
 
 const RecentTransactions = () => {
   return (
-    <div className="border border-[#eceef0] py-6 px-8 rounded-2xl">
+    <div className="border border-[#eceef0] py-6 px-8 rounded-lg mx-4.5 xl:mx-0">
       <h1 className="mb-4 text-lg font-medium">Recent Transactions</h1>
 
       <Timeline

@@ -32,7 +32,7 @@ const data = [
 function SalesOverviewChart() {
   const [month, setMonth] = React.useState("March 2025");
   return (
-    <Card className="w-3xl mx-auto">
+    <Card className="max-w-3xl mx-auto w-full rounded-lg">
       <CardContent>
         <div className="flex justify-between items-center mb-8">
           <Typography variant="p" className="font-medium">
