@@ -35,7 +35,7 @@ function SalesOverviewChart() {
     <Card className="max-w-3xl mx-auto w-full rounded-lg">
       <CardContent>
         <div className="flex justify-between items-center mb-8">
-          <Typography variant="p" className="font-medium">
+          <Typography variant="h6" className="font-medium">
             Sales Overview
           </Typography>
           <div className="flex items-center gap-2">

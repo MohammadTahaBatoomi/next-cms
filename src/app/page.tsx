@@ -28,7 +28,7 @@ export default function Home() {
         {/* Page Content */}
         <main className="pt-16 max-w-6xl mx-auto w-full">
           {/* Section 1 */}
-          <article className="flex flex-col 2xl:flex-row justify-center items-start my-6 px-6">
+          <article className="flex flex-col 2xl:flex-row justify-center items-start my-6 mx-6 xl:mx-2">
             <div className="w-full mr-6">
               <Salesoverviewchart />
             </div>
