@@ -34,8 +34,8 @@ function SalesOverviewChart() {
   return (
     <Card className="max-w-3xl mx-auto w-full rounded-lg">
       <CardContent>
-        <div className="flex justify-between items-center mb-8">
-          <Typography variant="h6" className="font-medium">
+        <div className="flex justify-between items-center mb-8 px-4">
+          <Typography variant="h6" className="font-medium m">
             Sales Overview
           </Typography>
           <div className="flex items-center gap-2">
@@ -58,8 +58,8 @@ function SalesOverviewChart() {
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={data} barCategoryGap={20}>
               <CartesianGrid strokeDasharray="3 3" vertical={false} />
-              <XAxis dataKey="name" tick={{ fontSize: 14 }} />
-              <YAxis tick={{ fontSize: 12 }} domain={[0, 350]} />
+              <XAxis dataKey="name" tick={{ fontSize: 9 }} color="#e0e0e0" />  
+              <YAxis domain={[0, 350]} color="#e0e0e0" tick={{ fontSize: 9 }} />
               <Tooltip />
               <Bar
                 dataKey="uv"
@@ -76,7 +76,7 @@ function SalesOverviewChart() {
             </BarChart>
           </ResponsiveContainer>
         </div>
-      </CardContent>
+      </CardContent>  
     </Card>
   );
 }
