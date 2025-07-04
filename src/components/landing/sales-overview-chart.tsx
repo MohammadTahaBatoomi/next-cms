@@ -115,7 +115,7 @@ function SalesOverviewChart() {
 
   return (
     <Card
-      className="max-w-3xl mx-auto w-full"
+      className="max-w-3xl mx-auto w-full xl:mb-0 mb-6"
       sx={{
         borderRadius: "8px",
         boxShadow: "0 6px 24px rgba(0,0,0,0)",

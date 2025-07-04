@@ -14,18 +14,18 @@ const Header: React.FC<{ onOpenSidebar?: () => void }> = ({
   };
 
   return (
-    <header className="fixed top-0 left-0 xl:left-[272px] z-30 w-full xl:w-[calc(100%-272px)] p-4 bg-white flex items-center justify-between">
+    <header className="fixed top-0 left-0 lg:left-[272px] z-30 w-full lg:w-[calc(100%-272px)] p-4 bg-white flex items-center justify-between">
       <div className="flex items-center gap-4">
         <IconButton onClick={handleMenuClick}>
-          <HiOutlineMenuAlt4 className="text-gray-500 cursor-pointer text-xl xl:hidden" />
+          <HiOutlineMenuAlt4 className="text-gray-500 cursor-pointer text-xl lg:hidden" />
         </IconButton>
         <div className="relative">
-          <button className="focus:outline-none">
-            <IconButton>
-              <PiBellRinging className="w-6 h-6 text-gray-500 cursor-pointer" />
-            </IconButton>
-            <span className="absolute top-0 right-0 block w-2 h-2 bg-[#5d87ff] rounded-full ring-2 ring-white"></span>
-          </button>
+          {/* حذف button اضافه و فقط استفاده از IconButton */}
+          <IconButton>
+            <PiBellRinging className="w-6 h-6 text-gray-500 cursor-pointer" />
+            {/* حواست باشه که این آیکون توی یک دکمه هست */}
+          </IconButton>
+          <span className="absolute top-0 right-0 block w-2 h-2 bg-[#5d87ff] rounded-full ring-2 ring-white"></span>
         </div>
       </div>
 

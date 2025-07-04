@@ -12,7 +12,7 @@ const COLORS = ["#5B7FFF", "#E0E7FF"];
 function YearlyBreakup() {
   return (
     <Card
-      className="w-full max-w-3xl h-auto xl:mt-0 mt-6"
+      className="w-full max-w-3xl h-auto"
       sx={{
         borderRadius: "8px",
         boxShadow: "0 6px 24px rgba(0,0,0,0)",
