@@ -2,7 +2,7 @@
 Modernize Free Next.js 15 Admin Template with Material Ui + Typescript 
 <!-- Main image of Template -->
 
-  <img src="https://adminmart.com/wp-content/uploads/2023/03/modernize-free-next-js-admin-template.png" />
+  <img src="/public/images/design/Readme.jpg" />
 
 
 
