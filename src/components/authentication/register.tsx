@@ -1,8 +1,18 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation"; // برای ریدایرکت
 
 export default function Login() {
+  const router = useRouter();
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault(); // جلوگیری از رفرش شدن فرم
+    router.push("/authentication/login"); // ریدایرکت
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#f5faff] to-[#eaf1fb] p-4">
       <div className="w-full max-w-md bg-white rounded-xl shadow-lg p-8 flex flex-col items-center">
@@ -14,10 +24,14 @@ export default function Login() {
           className="my-6"
         />
         <p className="text-gray-400 text-sm mb-4">Your Social Campaigns</p>
-        <form className="w-full flex flex-col gap-4">
+
+        <form
+          onSubmit={handleSubmit}
+          className="w-full flex flex-col gap-4"
+        >
           <div>
             <label
-              htmlFor="username"
+              htmlFor="Name"
               className="block text-sm font-semibold text-gray-700 mb-1"
             >
               Username
@@ -30,13 +44,13 @@ export default function Login() {
           </div>
           <div>
             <label
-              htmlFor="Email Address"
+              htmlFor="Email"
               className="block text-sm font-semibold text-gray-700 mb-1"
             >
               Email Address
             </label>
             <input
-              id="Email Address"
+              id="Email"
               type="email"
               className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[#5d87ff]"
             />
@@ -54,6 +68,7 @@ export default function Login() {
               className="w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-[#5d87ff]"
             />
           </div>
+
           <button
             type="submit"
             className="w-full bg-[#5d87ff] text-white font-semibold py-2 rounded-md shadow transition-colors"
@@ -61,6 +76,7 @@ export default function Login() {
             Sign In
           </button>
         </form>
+
         <div className="mt-6 text-sm text-gray-600">
           Already have an Account?{" "}
           <Link href="/authentication/login" className="text-[#5d87ff]">
