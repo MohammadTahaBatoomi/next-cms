@@ -2,7 +2,7 @@
 Modernize Free Next.js 15 Admin Template with Material Ui + Typescript 
 <!-- Main image of Template -->
 
-  <img src="/public/images/design/Readme.jpg" />
+  <img src="/public/images/design/Readme.png" />
 
 
 
