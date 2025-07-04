@@ -1,7 +1,5 @@
 # <a href="https://github.com/MohammadTahaBatoomi/next-cms">Modernize-nextjs-free</a>
 Modernize Free Next.js 15 Admin Template with Material Ui + Typescript 
-<!-- Place this tag where you want the button to render. -->
-<a class="github-button" href="https://github.com/MohammadTahaBatoomi/next-cms" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" aria-label="Star MohammadTahaBatoomi/Modernize-Next-Free on GitHub">Give a Star</a>
 <!-- Main image of Template -->
 
   <img src="https://adminmart.com/wp-content/uploads/2023/03/modernize-free-next-js-admin-template.png" />
