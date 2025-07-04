@@ -4,10 +4,8 @@ import {
   LineChart,
   Line,
   YAxis,
-  CartesianGrid,
-  ResponsiveContainer,
-  Area,
   Tooltip,
+  ResponsiveContainer,
 } from "recharts";
 import { FiDollarSign, FiArrowUpRight } from "react-icons/fi";
 
@@ -21,9 +19,53 @@ const data = [
   { name: "Jul", uv: 3490 },
 ];
 
+const CustomLineTooltip = ({ active, payload, label }) => {
+  if (active && payload && payload.length) {
+    return (
+      <div
+        style={{
+          backgroundColor: "rgba(30, 30, 30, 0.85)",
+          color: "#fff",
+          padding: "8px 12px",
+          borderRadius: "8px",
+          fontSize: "13px",
+          boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
+          backdropFilter: "blur(4px)",
+        }}
+      >
+        <div style={{ marginBottom: "0px", fontWeight: "bold", fontSize: "14px" }}>
+          {label}
+        </div>
+        <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+          <div
+            style={{
+              width: 8,
+              height: 8,
+              borderRadius: "50%",
+              backgroundColor: payload[0].color,
+            }}
+          />
+          <span>Revenue:</span>
+          <span style={{ fontWeight: "bold", marginLeft: "auto" }}>
+            ${payload[0].value}
+          </span>
+        </div>
+      </div>
+    );
+  }
+  return null;
+};
+
 function MonthlyEarnings() {
   return (
-    <Card className="rounded-lg shadow-md w-full max-w-3xl h-auto">
+    <Card
+      className="w-full max-w-3xl h-auto"
+      sx={{
+        borderRadius: "8px",
+        boxShadow: "0 6px 24px rgba(0,0,0,0)",
+        border: "1px solid #eceef0",
+      }}
+    >
       <CardContent>
         <div className="flex justify-between items-center mb-2">
           <h1 className="font-medium mt-1 text-lg">Monthly Earnings</h1>
@@ -48,11 +90,10 @@ function MonthlyEarnings() {
           <ResponsiveContainer width="100%" height="100%">
             <LineChart
               data={data}
-              margin={{ top: 0, right: 0, left: 0, bottom: -55 }}
+              margin={{ top: 0, right: 0, left: 0, bottom: -65 }}
             >
               <YAxis hide />
-              <Tooltip />
-
+              <Tooltip content={<CustomLineTooltip />} cursor={{ stroke: "transparent" }} />
               <Line
                 type="monotone"
                 dataKey="uv"
@@ -60,7 +101,7 @@ function MonthlyEarnings() {
                 strokeWidth={2}
                 dot={{ r: 0, stroke: "#38BDF8", strokeWidth: 2, fill: "#fff" }}
                 activeDot={{ r: 7 }}
-              />  
+              />
             </LineChart>
           </ResponsiveContainer>
         </div>

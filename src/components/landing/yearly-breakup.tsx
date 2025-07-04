@@ -11,7 +11,14 @@ const COLORS = ["#5B7FFF", "#E0E7FF"];
 
 function YearlyBreakup() {
   return (
-    <Card className="rounded-lg shadow-md w-full max-w-3xl h-auto xl:mt-0 mt-6">
+    <Card
+      className="w-full max-w-3xl h-auto xl:mt-0 mt-6"
+      sx={{
+        borderRadius: "8px",
+        boxShadow: "0 6px 24px rgba(0,0,0,0)",
+        border: "1px solid #eceef0",
+      }}
+    >
       <CardContent>
         <div className="flex items-center justify-between gap-26">
           <div className="flex flex-col justify-center gap-6">
