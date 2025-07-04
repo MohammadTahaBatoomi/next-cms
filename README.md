@@ -6,7 +6,6 @@ Modernize Free Next.js 15 Admin Template with Material Ui + Typescript
 
 
 
-
 # Installation 👨🏻‍💻
 
 > We recommend you use npm
