@@ -23,7 +23,6 @@ const SidebarShared: React.FC<Props> = ({ isMobileOpen = false, onClose }) => {
     <>
       {/* Desktop Sidebar */}
       <aside className="hidden lg:flex fixed top-0 left-0 w-68 h-full z-20 border-r border-[#e8eae9] flex-col px-6 py-6 bg-white">
-
         {/* Desktop Content */}
         <SidebarContent pathname={pathname} />
       </aside>
@@ -231,8 +230,9 @@ const SidebarContent: React.FC<{ pathname: string }> = ({ pathname }) => {
       <div className="mt-auto">
         <div className="bg-blue-100 rounded-xl p-4 flex flex-col items-start relative">
           <div className="mb-2 font-semibold text-gray-800">
-            Haven't account ?
+            Haven&apos;t account ?
           </div>
+
           <Link href="/authentication/register">
             <div className="bg-[#5d87ff] text-white px-4 py-1.5 rounded-lg text-sm font-medium shadow transition-colors hover:bg-blue-800">
               Sign Up

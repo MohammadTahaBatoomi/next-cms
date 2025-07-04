@@ -1,6 +1,4 @@
 import React from "react";
-import { FiSearch, FiSettings } from "react-icons/fi";
-import { AiOutlineAntDesign } from "react-icons/ai";
 
 const CustomReactIconsGuide = () => {
   return (
@@ -58,7 +56,7 @@ const CustomReactIconsGuide = () => {
               <span>{"{ FiHome }"}</span>
               {""}
               <span className="text-[#954121]">from</span>{" "}
-              <span className="text-[#289161]">'react-icons/fi'</span>;{"\n"}
+              <span className="text-[#289161]">&apos;react-icons/fi&apos;</span>{"\n"}
               <span className="text-[#954121]">function</span>{" "}
               <span className="text-[#304b77] font-bold">MyComponent</span>(){" "}
               {"{"}

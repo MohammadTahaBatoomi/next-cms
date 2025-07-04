@@ -9,8 +9,26 @@ import {
   timelineOppositeContentClasses,
 } from "@mui/lab";
 import { Link, Typography } from "@mui/material";
+import React, { ReactNode } from "react";
 
-const transactions = [
+
+type TimelineColor =
+  | "inherit"
+  | "primary"
+  | "secondary"
+  | "success"
+  | "error"
+  | "info"
+  | "warning";
+
+interface TransactionItem {
+  time: string;
+  color: TimelineColor;
+  content: ReactNode;  // به جای JSX.Element
+  hasConnector?: boolean;
+}
+
+const transactions: TransactionItem[] = [
   {
     time: "09:30 am",
     color: "primary",
@@ -92,7 +110,7 @@ const RecentTransactions = () => {
           <TimelineItem key={index}>
             <TimelineOppositeContent>{item.time}</TimelineOppositeContent>
             <TimelineSeparator>
-              <TimelineDot color={item.color as any} variant="outlined" />
+              <TimelineDot color={item.color} variant="outlined" />
               {item.hasConnector !== false && <TimelineConnector />}
             </TimelineSeparator>
             <TimelineContent>{item.content}</TimelineContent>

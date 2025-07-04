@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Shadow from "@/components/ui/default-shadow";
 
 function page() {

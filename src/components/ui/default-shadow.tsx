@@ -22,7 +22,7 @@ export default function DefaultShadow() {
           {/* روشن */}
           <div className="flex-1 flex justify-center">
             <div className="grid grid-cols-2 gap-6 md:gap-4 w-full">
-              {elevations.map((e, i) => (
+              {elevations.map((e) => (
                 <div
                   key={e.label + "-light"}
                   className={`flex items-center justify-center rounded-sm font-medium transition-all p-4
@@ -40,7 +40,7 @@ export default function DefaultShadow() {
           <div className="flex-1 flex justify-center">
             <div className="bg-[#111111] p-4 w-full">
               <div className="grid grid-cols-2 gap-6 md:gap-4 w-full">
-                {elevations.map((e, i) => (
+                {elevations.map((e) => (
                   <div
                     key={e.label + "-dark"}
                     className={`flex items-center justify-center rounded-sm font-medium transition-all p-4

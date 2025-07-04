@@ -83,7 +83,7 @@ function DefaultText() {
     <div className="space-y-6 max-w-6x border border-[#e8eae9] rounded-lg shadow-sm p-6 mx-6  ">
       <div className="font-medium mb-2 text-lg">Default Text</div>
       <div className="space-y-4">
-        {typography.map((item, idx) => (
+        {typography.map((item) => (
           <div key={item.label} className="bg-white rounded-lg shadow-sm p-4">
             {React.createElement(
               item.tag,

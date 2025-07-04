@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Card, CardContent, Typography } from "@mui/material";
 import {
@@ -9,6 +10,7 @@ import {
 } from "recharts";
 import { FiDollarSign, FiArrowUpRight } from "react-icons/fi";
 
+// داده‌ها
 const data = [
   { name: "Jan", uv: 2000 },
   { name: "Feb", uv: 2500 },
@@ -19,7 +21,17 @@ const data = [
   { name: "Jul", uv: 3490 },
 ];
 
-const CustomLineTooltip = ({ active, payload, label }) => {
+// ✅ تعریف type برای props تولتیپ
+type CustomTooltipProps = {
+  active?: boolean;
+  payload?: Array<{
+    value: number;
+    color: string;
+  }>;
+  label?: string | number;
+};
+
+const CustomLineTooltip = ({ active, payload, label }: CustomTooltipProps) => {
   if (active && payload && payload.length) {
     return (
       <div
@@ -56,6 +68,7 @@ const CustomLineTooltip = ({ active, payload, label }) => {
   return null;
 };
 
+// ✅ کامپوننت اصلی
 function MonthlyEarnings() {
   return (
     <Card
@@ -87,19 +100,27 @@ function MonthlyEarnings() {
         </div>
 
         <div className="h-15 w-full">
-          <ResponsiveContainer width="100%" height="100%">
+          <ResponsiveContainer width="100%" height={100}>
             <LineChart
               data={data}
               margin={{ top: 0, right: 0, left: 0, bottom: -65 }}
             >
               <YAxis hide />
-              <Tooltip content={<CustomLineTooltip />} cursor={{ stroke: "transparent" }} />
+              <Tooltip
+                content={<CustomLineTooltip />}
+                cursor={{ stroke: "transparent" }}
+              />
               <Line
                 type="monotone"
                 dataKey="uv"
                 stroke="#38BDF8"
                 strokeWidth={2}
-                dot={{ r: 0, stroke: "#38BDF8", strokeWidth: 2, fill: "#fff" }}
+                dot={{
+                  r: 0,
+                  stroke: "#38BDF8",
+                  strokeWidth: 2,
+                  fill: "#fff",
+                }}
                 activeDot={{ r: 7 }}
               />
             </LineChart>

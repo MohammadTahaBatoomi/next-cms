@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
   Card,
   CardContent,
-  Typography,
   Select,
   MenuItem,
   IconButton,
@@ -20,7 +19,6 @@ import {
 } from "recharts";
 import { FiMenu } from "react-icons/fi";
 
-// داده‌های نمونه
 const data = [
   { name: "16/08", uv: 340, pv: 270 },
   { name: "17/08", uv: 360, pv: 240 },
@@ -32,7 +30,22 @@ const data = [
   { name: "23/08", uv: 360, pv: 240 },
 ];
 
-const CustomTooltip = ({ active, payload, label }) => {
+// تایپ ساده‌تر برای props تولتیپ
+interface CustomTooltipProps {
+  active?: boolean;
+  payload?: Array<{
+    color?: string;
+    name?: string;
+    value?: number | string;
+  }>;
+  label?: string;
+}
+
+const CustomTooltip: React.FC<CustomTooltipProps> = ({
+  active,
+  payload,
+  label,
+}) => {
   if (active && payload && payload.length) {
     return (
       <div
@@ -70,8 +83,7 @@ const CustomTooltip = ({ active, payload, label }) => {
               }}
             />
             <span>
-              {entry.name === "uv" ? "Income this month" : "Expense this month"}
-              :
+              {entry.name === "uv" ? "Income this month" : "Expense this month"}:
             </span>
             <span style={{ fontWeight: "bold", marginLeft: "auto" }}>
               {entry.value}
@@ -81,24 +93,23 @@ const CustomTooltip = ({ active, payload, label }) => {
       </div>
     );
   }
-
   return null;
 };
 
 function SalesOverviewChart() {
   const [month, setMonth] = useState("March 2025");
 
-  const [anchorEl, setAnchorEl] = useState(null);
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
-  const handleMenuClick = (event) => {
+  const handleMenuClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
   const handleMenuClose = () => {
     setAnchorEl(null);
   };
 
-  const handleDownload = (type) => {
+  const handleDownload = (type: "svg" | "csv" | "png") => {
     const links = {
       svg: "/downloads/chart.svg",
       csv: "/downloads/data.csv",
@@ -124,9 +135,7 @@ function SalesOverviewChart() {
     >
       <CardContent>
         <div className="flex justify-between items-center mb-8 px-4">
-          <Typography variant="p" className="font-medium">
-            Sales Overview
-          </Typography>
+          <h1 className="font-medium mt-4 text-md">Sales Overview</h1>
           <div className="flex items-center gap-2">
             <Select
               value={month}
@@ -164,7 +173,7 @@ function SalesOverviewChart() {
               ].map((item) => (
                 <MenuItemMUI
                   key={item.type}
-                  onClick={() => handleDownload(item.type)}
+                  onClick={() => handleDownload(item.type as "svg" | "csv" | "png")}
                   sx={{
                     fontSize: "14px",
                     paddingY: "6px",
@@ -198,10 +207,7 @@ function SalesOverviewChart() {
                 axisLine={false}
                 tickLine={false}
               />
-              <Tooltip
-                content={<CustomTooltip />}
-                cursor={{ fill: "transparent" }}
-              />
+              <Tooltip content={<CustomTooltip />} cursor={{ fill: "transparent" }} />
               <Bar
                 dataKey="uv"
                 fill="#7499ff"

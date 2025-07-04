@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Text from "@/components/ui/default-text";
 
 function page() {

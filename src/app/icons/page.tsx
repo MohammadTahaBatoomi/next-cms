@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Icons from "@/components/ui/default-icons";
 
 function page() {

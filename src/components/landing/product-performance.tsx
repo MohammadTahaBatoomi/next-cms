@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Typography,
   Box,
@@ -48,7 +49,9 @@ const products = [
   },
 ];
 
-const headers = [
+type AlignType = "inherit" | "left" | "center" | "right" | "justify";
+
+const headers: { label: string; align?: AlignType }[] = [
   { label: "Id" },
   { label: "Assigned" },
   { label: "Name" },
@@ -65,59 +68,63 @@ const ProductPerformance = () => {
         <Table sx={{ whiteSpace: "nowrap", mt: 2 }}>
           <TableHead>
             <TableRow>
-              {headers.map((head, i) => (
-                <TableCell key={i} align={head.align || "left"}>
-                  <Typography variant="subtitle2" fontWeight={600}>
-                    {head.label}
-                  </Typography>
-                </TableCell>
-              ))}
+              {headers.map((head, i) => {
+                const align: AlignType = ["inherit", "left", "center", "right", "justify"].includes(head.align || "")
+                  ? (head.align as AlignType)
+                  : "left";
+
+                return (
+                  <TableCell key={i} align={align}>
+                    <Typography variant="subtitle2" fontWeight={600}>
+                      {head.label}
+                    </Typography>
+                  </TableCell>
+                );
+              })}
             </TableRow>
           </TableHead>
 
           <TableBody>
-            {products.map(
-              ({ id, name, post, pname, priority, pbg, budget }) => (
-                <TableRow key={id}>
-                  <TableCell>
-                    <Typography fontSize="15px" fontWeight={500}>
-                      {id}
-                    </Typography>
-                  </TableCell>
+            {products.map(({ id, name, post, pname, priority, pbg, budget }) => (
+              <TableRow key={id}>
+                <TableCell>
+                  <Typography fontSize="15px" fontWeight={500}>
+                    {id}
+                  </Typography>
+                </TableCell>
 
-                  <TableCell>
-                    <Typography variant="subtitle2" fontWeight={600}>
-                      {name}
-                    </Typography>
-                    <Typography color="textSecondary" fontSize="13px">
-                      {post}
-                    </Typography>
-                  </TableCell>
+                <TableCell>
+                  <Typography variant="subtitle2" fontWeight={600}>
+                    {name}
+                  </Typography>
+                  <Typography color="text.secondary" fontSize="13px">
+                    {post}
+                  </Typography>
+                </TableCell>
 
-                  <TableCell>
-                    <Typography color="textSecondary" variant="subtitle2" className="">
-                      {pname}
-                    </Typography>
-                  </TableCell>
+                <TableCell>
+                  <Typography color="text.secondary" variant="subtitle2">
+                    {pname}
+                  </Typography>
+                </TableCell>
 
-                  <TableCell>
-                    <Chip
-                      size="small"
-                      label={priority}
-                      sx={{
-                        px: 1,
-                        backgroundColor: pbg,
-                        color: "#fbfcfd",
-                      }}
-                    />
-                  </TableCell>
+                <TableCell>
+                  <Chip
+                    size="small"
+                    label={priority}
+                    sx={{
+                      px: 1,
+                      backgroundColor: pbg,
+                      color: "#fbfcfd",
+                    }}
+                  />
+                </TableCell>
 
-                  <TableCell align="right">
-                    <Typography variant="h6">${budget}k</Typography>
-                  </TableCell>
-                </TableRow>
-              )
-            )}
+                <TableCell align="right">
+                  <Typography variant="h6">${budget}k</Typography>
+                </TableCell>
+              </TableRow>
+            ))}
           </TableBody>
         </Table>
       </Box>
