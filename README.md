@@ -30,7 +30,7 @@ npm run build
 
 ## 🧠 Inspiration
 
-The visual design and layout structure of this project were inspired by the repository [`next-cms`](https://github.com/hossein-ghanimati/next-cms) by [Original Author or Team Name].
+The visual design and layout structure of this project were inspired by the repository [`next-cms`]([https://github.com/hossein-ghanimati/next-cms](https://github.com/adminmart/Modernize-Nextjs-Free)) by [Original Author or Team Name].
 
 > **Important Note:**  
 > I have not copied any code from the original project.  
